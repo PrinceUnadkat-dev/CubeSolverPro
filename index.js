@@ -192,9 +192,11 @@ import { createServer as createViteServer, createLogger } from "vite";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import { fileURLToPath } from "url";
+var __dirname = path.dirname(fileURLToPath(import.meta.url));
 var vite_config_default = defineConfig({
   base: "/CubeSolverPro/",
-  // ✅ Repo name
+  // repo name for GitHub Pages
   plugins: [react()],
   resolve: {
     alias: {
