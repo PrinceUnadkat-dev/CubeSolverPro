@@ -5,9 +5,13 @@ on:
     branches:
       - main  # change if your default branch is different
 
+permissions:
+  contents: write  # ✅ allows pushing to gh-pages branch
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
